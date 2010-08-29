@@ -26,7 +26,7 @@ import time
 from optparse import OptionParser
 
 __author__ = "Mathias Preiner <mathias.preiner@gmail.com>"
-__version__ = "1.0"
+__version__ = "1.0.1"
 
 # quantifier names
 UNIVERSAL = 'a'
@@ -856,7 +856,7 @@ def _merge_quantifier_sets(quantsets, index):
     for i in range(1, len(quantsets[index + 1])): # skip quantifier
         quantsets[index].append(quantsets[index + 1][i])
 
-    quantsets.pop(index + 1)                                 
+    quantsets.pop(index + 1)
 
 
 def _clean_up_formula(num_vars, quantsets, clauses):
@@ -1087,6 +1087,10 @@ def _print_info(msg):
 
 if __name__ == "__main__":
     """QBFuzz main progam."""
-    qbfuzz_main()    
-    sys.exit(0)
+
+    try:
+        qbfuzz_main()
+        sys.exit(0)
+    except KeyboardInterrupt as err_msg:
+        sys.exit(err_msg)
 
