@@ -77,6 +77,12 @@ PARAMETER DESCRIPTION:
 
   Possible value range: 0.0 - 1.0
 
+* '-f' ... Ratio of overall number of free variables
+  
+  This parameter is optional and not enabled by default
+
+  Possible value range: 0.0 - 1.0
+
 
 * '-o' ... Name of output file
 
