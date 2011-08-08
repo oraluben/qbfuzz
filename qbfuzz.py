@@ -26,7 +26,7 @@ import time
 from optparse import OptionParser
 
 __author__ = "Mathias Preiner <mathias.preiner@gmail.com>"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 # constants
 UNIVERSAL = 'a'
