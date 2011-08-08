@@ -423,7 +423,8 @@ def _write_file(outfile, comments, num_vars, quantsets, clauses):
         outfile.write("0\n")
 
     # close file
-    outfile.close()
+    if outfile != sys.stdout:
+        outfile.close()
 
 def _get_quantifier(literal):
     """
